@@ -1,0 +1,26 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<BorderPane fx:controller="streamboard.controller.MainController" fx:id="mainBorderPane"
+            xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <MenuBar fx:id="mainMenuBar" BorderPane.alignment="TOP_LEFT">
+            <menus>
+                <Menu fx:id="selectEventActionsMenu" text="Actions">
+                    <items>
+                        <MenuItem fx:id="eventAddPlayable" text="Add Playable" onAction="#eventAddPlayableHandler"></MenuItem>
+                        <MenuItem fx:id="eventSavePreferences" text="Save" onAction="#eventSavePreferencesHandler"></MenuItem>
+                        <MenuItem fx:id="eventQuitApplication" text="Quit" onAction="#eventQuitApplicationHandler"></MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <ScrollPane fx:id="mainScrollPane" hbarPolicy="AS_NEEDED">
+            <content>
+                <FlowPane fx:id="mainFlowPane" BorderPane.alignment="CENTER"></FlowPane>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
